@@ -10,8 +10,10 @@ Bash
 Starship
     download binary
     place in ~/.local/bin
-    update .bashrc >> eval "$(~/.local/bin/starship init bash)"
-    update .zshrc >> eval "$(~/.local/bin/starship init zsh)"
+    update .bashrc
+    	eval "$(~/.local/bin/starship init bash)"
+    update .zshrc
+    	eval "$(~/.local/bin/starship init zsh)"
     starship template:
 		https://starship.rs/presets/nerd-font
 		starship preset nerd-font-symbols -o ~/.config/starship.toml
