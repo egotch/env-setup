@@ -103,7 +103,7 @@ symbol = " "
 
 [git_branch]
 symbol = " "
-format = '[//](black bold) [$symbol\[$branch\]]($style) -'
+format = '[//](black bold) [$symbol\[$branch\]]($style)'
 
 [git_status]
 disabled = false
