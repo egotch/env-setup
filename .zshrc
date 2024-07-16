@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -21,7 +21,7 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -47,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -75,8 +75,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:/usr/local/bin:/usr/bin:$HOME/nvim-linux64/bin:$HOME/.local/bin:$HOME/.local/go/bin:$HOME/go/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -96,27 +95,27 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshdev='ssh egotkowski@aus-ds-dev-01.q2dc.local'
-alias ssh1='ssh egotkowski@aus-ds-prd-01-tst.q2dc.local'
-alias ssh2='ssh egotkowski@aus-ds-prd-02-tst.q2dc.local'
-alias ssh3='ssh egotkowski@aus-ds-prd-03.q2dc.local'
-alias ssh4='ssh egotkowski@aus-ds-prd-04.q2dc.local'
-alias ssh5='ssh egotkowski@aus-ds-prd-05.q2dc.local'
-alias ssh6='ssh egotkowski@aus-ds-prd-06.q2dc.local'
-alias ssh7='ssh egotkowski@aus-ds-prd-07.q2dc.local'
+# ALIASES
+# file listings
+alias l='ls -lhF'
+alias ll='ls -lhaF'
 
+# lighthouse
+alias run-lighthouse="source $HOME/lighthouse/.venv/bin/activate && lighthouse && deactivate"
 
+# sshing
 alias zssh1="ssh egotkowski@aus-ds-prd-01-tst.q2dc.local -t 'zsh -l'"
-alias zsshdev="ssh egotkowski@aus-ds-dev-01.q2dc.local -t 'zsh -l'"
 alias zssh2="ssh egotkowski@aus-ds-prd-02-tst.q2dc.local -t 'zsh -l'"
 alias zssh3="ssh egotkowski@aus-ds-prd-03.q2dc.local -t 'zsh -l'"
 alias zssh4="ssh egotkowski@aus-ds-prd-04.q2dc.local -t 'zsh -l'"
 alias zssh5="ssh egotkowski@aus-ds-prd-05.q2dc.local -t 'zsh -l'"
 alias zssh6="ssh egotkowski@aus-ds-prd-06.q2dc.local -t 'zsh -l'"
 alias zssh7="ssh egotkowski@aus-ds-prd-07.q2dc.local -t 'zsh -l'"
+alias zsshdal="ssh egotkowski@dal-ds-prd-01.q2dc.local -t 'zsh -l'"
+alias zsshdev="ssh egotkowski@aus-ds-dev-01.q2dc.local -t 'zsh -l'"
+alias zaws="ssh egotkowski@10.235.25.247 -t 'zsh -l'"
 
-
-eval "$(starship init zsh)"
+# venvs
+alias vmig="source ~/py_venvs/py312_mig/.venv/bin/activate"
+alias vds="source ~/py_venvs/py312_ds/.venv/bin/activate"
+eval "$($HOME/.local/bin/starship init zsh)"
