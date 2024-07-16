@@ -27,7 +27,7 @@
 #[ ](fg:#33658A)\
 #"""
 
-format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python$lua$json$golang$shell$nodejs$perl$docker_context
+format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python$lua$json$golang$shell$nodejs$perl$docker_context$cmd_duration
 $character
 """
 
@@ -43,7 +43,7 @@ format = "$symbol"
 disabled = false
 
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol](bold white) '
 disabled = false
 
 [username]
@@ -242,6 +242,18 @@ symbol = " "
 
 [swift]
 symbol = " "
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+#style = "bg:#33658A"
+symbol = " "
+format = '[//](black bold) [${symbol} $time ]($style)'
+
+[cmd_duration]
+min_time = 1
+symbol = " "
+format = '[//](black bold) [ $duration](bold black)'
 
 [zig]
 symbol = " "
