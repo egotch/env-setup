@@ -61,3 +61,12 @@
 `scp -r ~/zshrc egotkowski@aus-ds-dev-01.q2dc.local:~`
 
 `scp -r ~/.oh-my-zsh egotkowski@aus-ds-dev-01.q2dc.local:~`
+
+## TMUX setup
+* install tmux
+* update config
+* update plugins
+
+## Lazygit setup
+* confirm go installed
+* install lazygit from repo https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
