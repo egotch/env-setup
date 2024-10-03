@@ -4,8 +4,24 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "ctrl+/"
+        },
+        {
             "command": "unbound",
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+plus"
         },
         {
             "command": 
@@ -29,6 +45,13 @@
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
             },
             "keys": "ctrl+\\"
         }
@@ -51,8 +74,8 @@
         "list": 
         [
             {
-                "backgroundImage": null,
-                "backgroundImageOpacity": 0.17,
+                "backgroundImage": "C:\\Users\\egotkowski\\OneDrive - Q2e\\Pictures\\WallPapers\\a0ez44uhhx911.jpg",
+                "backgroundImageOpacity": 0.07,
                 "bellStyle": "taskbar",
                 "colorScheme": "MysticNight",
                 "commandline": "ssh egotkowski@egotkowski-co-jb.q2dc.local",
@@ -60,37 +83,45 @@
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono"
+                    "face": "JetBrainsMono Nerd Font"
                 },
                 "guid": "{e6307d95-78f9-5084-8fb4-2221b80ace92}",
                 "hidden": false,
                 "icon": "\ud83d\udce1",
                 "intenseTextStyle": "bright",
                 "name": "egotkowski-co-jb",
-                "opacity": 51,
+                "opacity": 100,
+                "padding": "6",
                 "scrollbarState": "visible",
                 "suppressApplicationTitle": true,
                 "tabTitle": "LinuxVDI",
                 "useAcrylic": true
             },
             {
-                "colorScheme": "Ubuntu-ColorScheme",
+                "backgroundImage": "C:\\Users\\egotkowski\\OneDrive - Q2e\\Pictures\\WallPapers\\a0ez44uhhx911.jpg",
+                "backgroundImageOpacity": 0.1,
+                "colorScheme": "MysticNight",
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono"
+                    "face": "JetBrainsMono Nerd Font"
                 },
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "WSL-Ubuntu",
-                "opacity": 49,
+                "opacity": 100,
                 "source": "Windows.Terminal.Wsl",
                 "suppressApplicationTitle": true,
                 "tabTitle": "WSL-Ubuntu",
-                "useAcrylic": true
+                "useAcrylic": false
             },
             {
+                "colorScheme": "MysticNight",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "font": 
+                {
+                    "face": "FiraCode Nerd Font"
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
@@ -127,6 +158,24 @@
                 "suppressApplicationTitle": true,
                 "tabTitle": "LinuxVDI",
                 "useAcrylic": true
+            },
+            {
+                "backgroundImage": "C:\\Users\\egotkowski\\OneDrive - Q2e\\Pictures\\WallPapers\\a0ez44uhhx911.jpg",
+                "backgroundImageOpacity": 0.1,
+                "colorScheme": "MysticNight",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -l -i",
+                "cursorShape": "filledBox",
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font"
+                },
+                "guid": "{00000000-0000-0000-0000-000000000001}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "suppressApplicationTitle": true,
+                "tabTitle": "Git Bash"
             }
         ]
     },
