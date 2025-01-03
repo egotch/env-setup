@@ -60,7 +60,7 @@ config.colors = {
 config.background = {
 	{
 		source = {
-			File = "C:/Users/egotkowski/OneDrive - Q2e/Pictures/WallPapers/vecteezy_arctic-aurora-borealis-over-night-lake-in-sky_14603121.jpg",
+			File = "C:/Users/egotk/OneDrive/Pictures/vecteezy_arctic-aurora-borealis-over-night-lake-in-sky_14603121.jpg",
 		},
 	},
 	{
@@ -73,8 +73,22 @@ config.background = {
 }
 
 -- Startup
-config.default_gui_startup_args = { 'ssh', 'egotkowski-co-jb.q2dc.local' }
-
+-- config.default_domain = 'WSL:Ubuntu'
+-- config.default_gui_startup_args = { 'ssh', 'egotkowski-co-jb.q2dc.local' }
+config.launch_menu = {
+	{
+		label = 'WSL: Ubuntu',
+		args = { 'wsl', '-d', 'Ubuntu' },
+	},
+	{
+		label = 'Git Bash',
+		args = { 'C:\\Program Files\\Git\\bin\\bash.exe' },
+	},
+	{
+		label = 'Linux JB',
+		args = { 'ssh', 'egotkowski@egotkowski-co-jb.q2dc.local' },
+	},
+}
 
 -- Tabs
 config.enable_tab_bar = false
@@ -82,11 +96,19 @@ config.enable_tab_bar = false
 -- Keybindings
 config.keys = {
 	-- Toggle Full Screen
-	{ key = 'n', mods = 'SHIFT|CTRL', action = wezterm.action.ToggleFullScreen },
+	{ key = 'f', mods = 'SHIFT|CTRL', action = wezterm.action.ToggleFullScreen },
+	-- Spawn new window
+	{ key = 'n', mods = 'SHIFT|CTRL', action = wezterm.action.SpawnWindow },
 	-- paste from the clipboard
 	{ key = 'v', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
 	-- paste from the primary selection
 	{ key = 'v', mods = 'CTRL', action = act.PasteFrom 'PrimarySelection' },
+
+	-- Platforms
+	{ key = 'l', mods = 'ALT', action = wezterm.action.ShowLauncher },
+
+	--*-- Ubuntu
+	-- { key = "l", mods = "CTRL|SHIFT", action = wezterm.action.EmitEvent("SpawnCommand", { command = "wsl -d Ubuntu" }) },
  
  }
 
