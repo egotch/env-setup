@@ -11,7 +11,9 @@ local config = wezterm.config_builder()
 -- Appearance
 config.color_scheme = 'nightfox'
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 14
+config.font_size = 13
+
+--[[
 config.colors = {
 	-- default text Color
 	foreground = "#819CCC",
@@ -55,17 +57,19 @@ config.colors = {
 		'#FFFFFF',
 		},
 }
-
+--]]
 
 config.background = {
 	{
 		source = {
-			File = "C:/Users/egotk/OneDrive/Pictures/vecteezy_arctic-aurora-borealis-over-night-lake-in-sky_14603121.jpg",
+			-- File = "C:/Users/egotkowski/OneDrive - Q2e/Pictures/WallPapers/vecteezy_arctic-aurora-borealis-over-night-lake-in-sky_14603121.jpg",
+			File = "C:/Users/egotkowski/OneDrive - Q2e/Pictures/WallPapers/cozy_lofi_window.jpg",
 		},
 	},
 	{
 		source = {
-			Color = "rgba(5, 0, 28, 0.9)",
+			-- Color = "rgba(5, 0, 28, 0.9)", --boreal
+			Color = "rgba(25,35,48, 0.96)", --nightfox
 		},
 		height = "100%",
 		width = "100%",
